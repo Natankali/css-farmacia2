@@ -1,0 +1,361 @@
+/* =====================================================================
+   NUTRALLIS OFICIAL - TEMA IPANEMA (NUVEMSHOP)
+   Adaptado com as classes reais da loja
+   ===================================================================== */
+@import url('https://googleapis.com');
+
+:root {
+  --lime: #a8e63a;
+  --gd: #1f6f2f;
+  --k: #0b0f0c;
+  --bg: #f7f6f8;
+  --lg: #f1f7e8;
+
+  /* Sobrescrevendo variáveis nativas do Tema Ipanema */
+  --main-background: #ffffff !important;
+  --main-foreground: #111111 !important;
+  --accent-color: #1f6f2f !important;
+
+  --button-primary-background-color: #a8e63a !important;
+  --button-primary-foreground-color: #0b0f0c !important;
+  --button-primary-background: #a8e63a !important;
+  --button-primary-color: #0b0f0c !important;
+  --button-primary-fill: #0b0f0c !important;
+  --button-primary-border-radius: 8px !important;
+
+  --button-secondary-background: #1f6f2f !important;
+  --button-secondary-color: #ffffff !important;
+  --button-secondary-border: 0 !important;
+  --button-secondary-border-radius: 8px !important;
+
+  --label-primary-background: #dbefcf !important;
+  --label-primary-foreground: #1f5a14 !important;
+  --label-primary-border-radius: 4px !important;
+
+  --label-secondary-background: #e8f7a8 !important;
+  --label-secondary-foreground: #44550a !important;
+  --label-secondary-border-radius: 4px !important;
+
+  --heading-font: 'Montserrat', 'Inter', sans-serif !important;
+  --body-font: 'Inter', system-ui, sans-serif !important;
+  --border-radius: 10px !important;
+}
+
+/* Tipografia Geral */
+body {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  color: #111111 !important;
+  background-color: #ffffff !important;
+}
+
+h1, h2, h3, h4, h5, h6,
+.heading-block,
+.product-item-name,
+.modal-title {
+  font-family: 'Montserrat', 'Inter', sans-serif !important;
+  text-transform: uppercase !important;
+  line-height: 1.12 !important;
+}
+
+/* =====================================================================
+   BARRA DE AVISOS E CABEÇALHO (PRETO NUTRALLIS #0b0f0c)
+   ===================================================================== */
+.navigation-bar,
+.js-navigation-bar {
+  background-color: #070a08 !important;
+  color: #e8efe4 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+  font-size: 12px !important;
+}
+
+.navigation-bar svg,
+.js-navigation-bar svg {
+  fill: var(--lime) !important;
+  color: var(--lime) !important;
+}
+
+.js-header,
+.head-main,
+.js-head-main,
+.nav-desktop-container {
+  background-color: #0b0f0c !important;
+  color: #ffffff !important;
+  --header-background: #0b0f0c !important;
+  --header-foreground: #ffffff !important;
+  --header-utilities-foreground: #ffffff !important;
+  --header-desktop-nav-background: #0b0f0c !important;
+  --header-desktop-nav-foreground: #e8efe4 !important;
+}
+
+.nav-desktop-container {
+  border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+
+.logo-text,
+.logo-text h1 {
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.5px !important;
+}
+
+/* Ícones do Cabeçalho e Carrinho */
+.header-icon svg,
+.utility-icon {
+  fill: #ffffff !important;
+  color: #ffffff !important;
+}
+
+.js-cart-widget-amount,
+.badge {
+  background-color: var(--lime) !important;
+  color: #0b0f0c !important;
+  font-weight: 800 !important;
+}
+
+/* Links do Menu Desktop */
+.nav-desktop .nav-list-link {
+  color: #e8efe4 !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  transition: color 0.2s ease !important;
+}
+
+.nav-desktop .nav-list-link:hover {
+  color: var(--lime) !important;
+}
+
+/* Barra de Busca */
+.search-form-field .form-control.search-input {
+  background-color: #ffffff !important;
+  color: #111111 !important;
+  border-radius: 6px !important;
+  border: 0 !important;
+  height: 38px !important;
+}
+
+.search-submit-btn svg {
+  fill: #111111 !important;
+}
+
+/* =====================================================================
+   BOTÕES (VERDE-LIMA #a8e63a E EFEITO DE ESCALA)
+   ===================================================================== */
+.btn,
+.btn-primary,
+input[type="submit"].btn-primary {
+  background-color: var(--lime) !important;
+  color: #0b0f0c !important;
+  border: 0 !important;
+  border-radius: 8px !important;
+  font-family: 'Montserrat', 'Inter', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 13px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.3px !important;
+  padding: 12px 22px !important;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease !important;
+}
+
+.btn:hover,
+.btn-primary:hover {
+  transform: scale(1.04) !important;
+  filter: brightness(1.06) !important;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.22) !important;
+}
+
+.btn:active,
+.btn-primary:active {
+  transform: scale(0.97) !important;
+}
+
+.btn-outline {
+  background-color: var(--gd) !important;
+  color: #ffffff !important;
+  border-radius: 8px !important;
+}
+
+/* =====================================================================
+   CARROSSEL HERO PRINCIPAL
+   ===================================================================== */
+.section-slideshow .swiper-slide {
+  background-color: #070a08 !important;
+  color: #ffffff !important;
+}
+
+.section-slideshow .heading-block {
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.55) !important;
+}
+
+.section-slideshow .text-content {
+  color: #e8efe4 !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  background-color: rgba(11, 15, 12, 0.75) !important;
+  color: #ffffff !important;
+  border-radius: 50% !important;
+  width: 40px !important;
+  height: 40px !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  transition: background-color 0.2s ease, color 0.2s ease !important;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: var(--lime) !important;
+  color: #0b0f0c !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--lime) !important;
+}
+
+/* =====================================================================
+   VITRINE E CARDS DE PRODUTOS (ESTILO NUTRALLIS)
+   ===================================================================== */
+.section-featured-home .heading-block {
+  color: #0b0f0c !important;
+  font-weight: 800 !important;
+}
+
+.product-item,
+.js-product-item-private {
+  background-color: var(--bg) !important;
+  border-radius: 10px !important;
+  padding: 12px !important;
+  text-align: center !important;
+  transition: box-shadow 0.22s ease, transform 0.22s ease !important;
+  border: 1px solid #eeeeee !important;
+}
+
+.product-item:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08) !important;
+}
+
+.product-item-image-container {
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  background-color: #ffffff !important;
+}
+
+.product-item-image {
+  transition: transform 0.3s ease !important;
+}
+
+.product-item:hover .product-item-image {
+  transform: scale(1.06) !important;
+}
+
+.product-item-name {
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  color: #111111 !important;
+  margin-top: 8px !important;
+}
+
+.product-item-price {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 800 !important;
+  color: var(--gd) !important;
+}
+
+.product-item-payment-discount {
+  font-size: 12px !important;
+  color: #1f5a14 !important;
+  font-weight: 600 !important;
+}
+
+/* Etiquetas (Badges) dos Produtos */
+.product-labels .label {
+  background-color: #dbefcf !important;
+  color: #1f5a14 !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  border-radius: 4px !important;
+  padding: 3px 8px !important;
+  text-transform: uppercase !important;
+}
+
+/* =====================================================================
+   BANNERS DE CATEGORIA (BANNERS GRID)
+   ===================================================================== */
+.banner-block {
+  border-radius: 10px !important;
+  overflow: hidden !important;
+  background-color: #0b2410 !important;
+}
+
+.banner-block .heading-block {
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5) !important;
+}
+
+.banner-block img {
+  transition: transform 0.5s ease !important;
+}
+
+.banner-block:hover img {
+  transform: scale(1.05) !important;
+}
+
+/* =====================================================================
+   CARRINHO LATERAL E MODAIS
+   ===================================================================== */
+#modal-cart .modal-header,
+#nav-hamburger .modal-header {
+  background-color: #0b0f0c !important;
+  color: #ffffff !important;
+}
+
+#modal-cart .modal-title {
+  color: #ffffff !important;
+}
+
+#modal-cart .modal-close svg,
+#nav-hamburger .modal-close svg {
+  fill: #ffffff !important;
+}
+
+.bar-progress-active {
+  background-color: var(--gd) !important;
+}
+
+/* =====================================================================
+   RODAPÉ (PRETO NUTRALLIS #0b0f0c)
+   ===================================================================== */
+.section-footer,
+.footer-content {
+  background-color: #0b0f0c !important;
+  color: #9db09a !important;
+  --footer-background: #0b0f0c !important;
+  --footer-foreground: #ffffff !important;
+}
+
+.footer-menu-title {
+  color: var(--lime) !important;
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  font-size: 13px !important;
+}
+
+.footer-menu-list a,
+.footer-institutional-description,
+.footer-payment-shipping-label,
+.footer-copyright {
+  color: #b6c9b3 !important;
+  font-size: 12.5px !important;
+}
+
+.footer-menu-list a:hover {
+  color: var(--lime) !important;
+}
+
+.footer-secondary-info {
+  border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
